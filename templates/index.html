@@ -5,17 +5,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <h1><center>Automated Banking Chatbot</center></h1>
+    <h1><center>Banking bot</center></h1>
     <div id='maincont'>
       <div id="chatbox">
-        <p class="botText"><span>Please try typing full sentences as I am still learning!</span></p>
-        <p class="botText"><span>I am a chatbot. You can begin conversation by typing in a message and pressing enter.</span></p>
-        <p class="botText"><span>Hi There! What is your name?</span></p>
+        <p class="botText"><span>Hello I am a chatbot. You can begin conversation by typing in a message and pressing enter.</span></p>
+        <p class="botText"><span>how can i help you?</span></p>
       </div>
       <div id="userInput">
         <input id="textInput" type="text" name="msg" placeholder="Message">
-        <input id="buttonInput" type="submit" value="Send">
-      </div>
+        <input id="buttonInput"  type="submit" value="send">
+      </div>  
       <script>
         function getBotResponse() {
           var rawText = $("#textInput").val();
