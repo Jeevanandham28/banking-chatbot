@@ -1,10 +1,8 @@
 from flask import Flask, render_template, request
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
-import os
-
-from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
+
+import os
 
 filenumber=int(os.listdir('saved_conversations')[-1])
 filenumber=filenumber+1
@@ -18,11 +16,18 @@ app = Flask(__name__)
 english_bot = ChatBot('Bot',
              storage_adapter='chatterbot.storage.SQLStorageAdapter',
              logic_adapters=[
-   {
-       'import_path': 'chatterbot.logic.BestMatch'
-   },
-   
-],
+                {
+                    'import_path': 'chatterbot.logic.BestMatch'
+                },
+                {
+                    'import_path': 'chatterbot.logic.TimeLogicAdapter'
+                },
+                {
+                    'import_path': 'chatterbot.logic.MathematicalEvaluation'
+                },
+                
+                ],
+
 trainer='chatterbot.trainers.ListTrainer')
 english_bot.set_trainer(ListTrainer)
 
@@ -33,8 +38,7 @@ def home():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg')
-    response = str(english_bot.get_response(userText))
-
+    response =str(english_bot.get_response(userText))
     appendfile=os.listdir('saved_conversations')[-1]
     appendfile= open('saved_conversations/'+str(filenumber),"a")
     appendfile.write('user : '+userText+'\n')
