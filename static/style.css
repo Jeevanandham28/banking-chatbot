@@ -1,14 +1,16 @@
 body {
+    
     font-family: Garamond;
-    background-color: lightgray;
+    background-color: rgb(251, 251, 253);
 }
 
 h1 {
-    color: black;
+    color: #fbf9f8;
     margin-bottom: 0;
     margin-top: 0;
     text-align: center;
     font-size: 40px;
+    background: linear-gradient(159.17deg, #f56004 -9.41%, #f56004 97.45%);
 }
 
 h3 {
@@ -19,19 +21,19 @@ h3 {
 }
 
 
-
-
 #chatbox {
+    border: 2px #f56004;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 60%;
     margin-top: 60px;
 }
 
 #userInput {
+    border: 1px solid #0a0a0a;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 60%;
     margin-top: 60px;
 }
 
@@ -44,15 +46,18 @@ h3 {
 }
 
 #buttonInput {
-    padding: 3px;
-    margin-top: 10px;
-    font-family: monospace;
-    font-size: 17px;
-    width: 101%;
+    background-color: #f96603;
+    color: #dddada;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 101%
 }
 
 .userText {
-    color: white;
+    color: rgb(19, 19, 19);
     font-family: monospace;
     font-size: 17px;
     text-align: right;
@@ -60,13 +65,13 @@ h3 {
 }
 
 .userText span {
-    background-color:  #003399;
+    background-color: #f56004;
     padding: 10px;
     border-radius: 2px;
 }
 
 .botText {
-    color: white;
+    color: rgb(11, 11, 11);
     font-family: monospace;
     font-size: 17px;
     text-align: left;
@@ -74,7 +79,7 @@ h3 {
 }
 
 .botText span {
-    background-color:  #0066ff;
+    background-color:  #838382; 
     padding: 10px;
     border-radius: 2px;
 }
