@@ -4,7 +4,7 @@ A prototype of banking chatbot implemented in python using ChatterBot, flask and
 # flask-chatbot
 Built on python 3.6
 Flask==0.11
-chatterbot==0.8.4
+chatterbot==0.7.4
 SQLAlchemy==1.1.11
 
 #### A web implementation of [ChatterBot](https://github.com/gunthercox/ChatterBot) using Flask.
